@@ -64,4 +64,26 @@ Responsive design using Tailwind CSS.
 
 Functional components for handling user input.
 
-Focused on clean, modern styling to enhance user experience.
+Focused on clean, modern styling to enhance user experience.  
+
+
+
+## Milestone 3 Summary
+
+## 1. Installed Necessary Dependencies
+Set up essential Node.js packages such as express for handling server requests, dotenv for managing environment variables, mongoose for database interaction, and nodemon for automatic server restarts during development.
+
+## 2. Organized Backend Structure
+Created a structured backend setup by adding index.js as the main entry point for the server and db.js to manage the database connection, ensuring a modular and maintainable codebase.
+
+## 3. Server Setup with Environment Variables
+Developed a server that listens on a specified port, using values from an .env file to maintain flexibility and security in configuration settings.
+
+## 4. Integrated MongoDB for Data Storage
+Connected the backend to a MongoDB database using mongoose, enabling efficient storage and retrieval of application data.
+
+## 5. Verified Server-Database Connection
+Successfully confirmed the connection between the server and MongoDB, ensuring smooth data transactions between the backend and the database.
+
+## 6. Implemented Basic Error Handling
+Added error-handling mechanisms to manage potential issues, improving the stability and reliability of the backend system.

@@ -17,9 +17,9 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-indigo-600">
+    <div className="flex items-center justify-center min-h-screen bg-black">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-sm">
-        <h2 className="text-3xl font-bold text-center text-indigo-600 mb-6">Login</h2>
+        <h2 className="text-3xl font-bold text-center text-black mb-6">Login</h2>
 
         {error && <p className="text-red-500 text-center mb-4">{error}</p>}
 
@@ -31,7 +31,7 @@ const LoginPage = () => {
             <input
               type="email"
               id="email"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-500"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -45,7 +45,7 @@ const LoginPage = () => {
             <input
               type="password"
               id="password"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-500"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
@@ -54,17 +54,17 @@ const LoginPage = () => {
 
           <button
             type="submit"
-            className="w-full py-2 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-700 transition"
+            className="w-full py-2 bg-gray-800 text-white font-semibold rounded-md hover:bg-gray-900 transition"
           >
             Login
           </button>
         </form>
 
         <div className="flex justify-between mt-6 text-sm text-gray-600">
-          <a href="#" className="hover:text-indigo-600">
+          <a href="#" className="hover:text-gray-400">
             Forgot password?
           </a>
-          <a href="/register" className="hover:text-indigo-600">
+          <a href="/register" className="hover:text-gray-400">
             Create an account
           </a>
         </div>
