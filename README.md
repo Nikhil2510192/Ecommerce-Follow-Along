@@ -28,6 +28,9 @@ In this session, we discussed the foundational aspects of the E-Commerce project
 
 This milestone defined the scope and objectives of the project, which laid a solid foundation for the development process.
 
+
+
+
  ## Milestone 2: Progress Summary
 
  ##  Key Accomplishments
@@ -68,6 +71,7 @@ Focused on clean, modern styling to enhance user experience.
 
 
 
+
 ## Milestone 3 Summary
 
 ## 1. Installed Necessary Dependencies
@@ -87,3 +91,20 @@ Successfully confirmed the connection between the server and MongoDB, ensuring s
 
 ## 6. Implemented Basic Error Handling
 Added error-handling mechanisms to manage potential issues, improving the stability and reliability of the backend system.
+
+
+
+
+
+
+
+## Milestone 3 Summary
+
+## 1. Created a User Model
+Designed a schema using Mongoose to define how user data (e.g., name, email, password) will be structured and stored in MongoDB.
+
+## 2. Created a User Controller
+Developed functions to handle user-related operations, such as adding new users and retrieving user data, ensuring proper request handling and responses.
+
+## 3. Enabled and Configured Multer
+Integrated Multer middleware to handle file uploads, allowing users to upload and store files (such as profile pictures) efficiently.
