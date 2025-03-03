@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -60,16 +61,17 @@ const LoginPage = () => {
           </button>
         </form>
 
-        <div className="flex justify-between mt-6 text-sm text-gray-600">
+        <div className="text-sm text-gray-500 text-center mt-2">
           <a href="#" className="hover:text-gray-400">
             Forgot password?
           </a>
-          <a href="/register" className="hover:text-gray-400">
-            Create an account
-          </a>
+        </div>
+        <p className="text-sm text-gray-500 text-center mt-4">
+             New to Ecommerce? 
+             <Link to="/" className="text-blue-500 font-semibold">Sign Up</Link>
+        </p>
         </div>
       </div>
-    </div>
   );
 };
 

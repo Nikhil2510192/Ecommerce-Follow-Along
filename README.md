@@ -108,3 +108,22 @@ Developed functions to handle user-related operations, such as adding new users 
 
 ## 3. Enabled and Configured Multer
 Integrated Multer middleware to handle file uploads, allowing users to upload and store files (such as profile pictures) efficiently.
+
+
+
+
+
+
+
+## Milestone 4 Summary
+
+## 1️. Built the Sign-Up Page
+Designed a responsive Sign-Up Page using HTML and CSS, ensuring a clean and structured layout. Used TailwindCSS for styling consistency.
+
+## 2️. Added Form Validation
+Implemented client-side validation to prevent empty submissions, enforce valid email formats, and ensure password security.
+
+## 3️. Defined Routes for Authentication Pages
+Configured React Router to enable seamless navigation between the Login and Sign-Up pages.
+
+This milestone ensures a user-friendly authentication flow with validation and smooth routing. 🚀
