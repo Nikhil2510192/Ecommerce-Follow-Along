@@ -127,3 +127,17 @@ Implemented client-side validation to prevent empty submissions, enforce valid e
 Configured React Router to enable seamless navigation between the Login and Sign-Up pages.
 
 This milestone ensures a user-friendly authentication flow with validation and smooth routing. 🚀
+
+
+
+
+## Milestone 6: 
+In this milestone, I focused on enhancing security in the user authentication process. The key improvements include:
+
+## 1. Password Encryption: 
+Implemented bcrypt to hash user passwords before storing them in the database, ensuring sensitive credentials are not saved in plain text.
+
+## 1.Secure Data Storage: 
+Successfully saved complete user details (username, email, and encrypted password) in the database while maintaining security best practices.
+
+These implementations strengthen the overall security of user authentication, preventing unauthorized access and enhancing data protection.
