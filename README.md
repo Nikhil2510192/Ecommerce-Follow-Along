@@ -131,6 +131,10 @@ This milestone ensures a user-friendly authentication flow with validation and s
 
 
 
+
+
+
+
 ## Milestone 6: 
 In this milestone, I focused on enhancing security in the user authentication process. The key improvements include:
 
@@ -141,3 +145,28 @@ Implemented bcrypt to hash user passwords before storing them in the database, e
 Successfully saved complete user details (username, email, and encrypted password) in the database while maintaining security best practices.
 
 These implementations strengthen the overall security of user authentication, preventing unauthorized access and enhancing data protection.
+
+
+
+
+
+
+
+
+
+
+## Milestone 7 Summary
+In this milestone, we implemented a complete login system with secure password verification:
+
+## 1.Login Endpoint Implementation
+Created secure login endpoint at /users/login.
+Added user verification against database records.
+Implemented proper error handling for non-existent users.
+Password Verification System.
+
+## Password Validation
+Integrated bcrypt for secure password comparison
+Implemented password hash comparison with stored credentials
+Added secure error messages to prevent user enumeration
+Login Response Handling
+

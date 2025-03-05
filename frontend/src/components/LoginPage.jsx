@@ -1,19 +1,34 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [message, setMessage] = useState(""); 
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!email || !password) {
-      setError("Please fill in all fields");
-    } else {
-      setError("");
-      // Handle login logic
-      alert("Login successful!");
+    setMessage(""); 
+
+    try {
+      const response = await fetch("http://localhost:8000/users/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        localStorage.setItem("token", data.token);
+        setMessage(data.message); 
+        navigate("/");
+      } else {
+        setMessage(data.error); 
+      }
+    } catch (error) {
+      setMessage("Server error. Please try again."); 
     }
   };
 
@@ -22,7 +37,7 @@ const LoginPage = () => {
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-sm">
         <h2 className="text-3xl font-bold text-center text-black mb-6">Login</h2>
 
-        {error && <p className="text-red-500 text-center mb-4">{error}</p>}
+        {message && <p className="text-red-500 text-center mb-4">{message}</p>}
 
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
@@ -52,7 +67,8 @@ const LoginPage = () => {
               required
             />
           </div>
-
+          
+          
           <button
             type="submit"
             className="w-full py-2 bg-gray-800 text-white font-semibold rounded-md hover:bg-gray-900 transition"
@@ -67,11 +83,11 @@ const LoginPage = () => {
           </a>
         </div>
         <p className="text-sm text-gray-500 text-center mt-4">
-             New to Ecommerce? 
-             <Link to="/" className="text-blue-500 font-semibold">Sign Up</Link>
+          New to Ecommerce? 
+          <Link to="/" className="text-blue-500 font-semibold"> Sign Up</Link>
         </p>
-        </div>
       </div>
+    </div>
   );
 };
 
