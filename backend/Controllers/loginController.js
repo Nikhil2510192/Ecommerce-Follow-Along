@@ -11,8 +11,6 @@ const loginUser = async (req, res) => {
             return res.status(400).json({ error: "Email and password are required." });
         }
         
-
-
         const user = await User.findOne({ email });
 
         if (!user) {
@@ -23,7 +21,7 @@ const loginUser = async (req, res) => {
         const isPasswordValid = await bcrypt.compare(password, user.password);
         if (!isPasswordValid) {
             console.log(' invalid password')
-            res.status(400).json({ error: "Invalid password." });
+            return res.status(400).json({ error: "Invalid password." });
         }
     }   console.log("Login successful")
         return res.status(200).json({ message: "Login successful!", user });

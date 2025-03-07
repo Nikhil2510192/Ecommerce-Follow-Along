@@ -23,7 +23,7 @@ const LoginPage = () => {
       if (response.ok) {
         localStorage.setItem("token", data.token);
         setMessage(data.message); 
-        navigate("/");
+        navigate("/Homepage");
       } else {
         setMessage(data.error); 
       }

@@ -26,7 +26,7 @@ export default function Signup() {
       if (response.ok) {
         
         setServerError(data.message || 'User created successfully!');
-        navigate('/login'); 
+        navigate('/Homepage'); 
       } else {
         
         setServerError(data.error || 'Registration failed');
@@ -44,6 +44,17 @@ export default function Signup() {
         className="bg-white p-6 rounded-lg shadow-md w-96"
       >
         <h2 className="text-2xl font-bold mb-4 text-black text-center">Sign Up</h2>
+
+        <label className="block text-black">User Type:</label>
+        <select
+          {...register('userType', { required: 'Please select a user type' })}
+          className="w-full p-2 border rounded mt-1 mb-3 text-black bg-white"
+        >
+          <option value="">Select user type</option>
+          <option value="buyer">Buyer</option>
+          <option value="vendor">Vendor</option>
+        </select>
+        {errors.userType && <p className="text-red-500 text-sm mt-1">{errors.userType.message}</p>}
 
         <label className="block text-black">Username:</label>
         <input

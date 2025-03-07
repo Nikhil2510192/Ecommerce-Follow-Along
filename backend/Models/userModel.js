@@ -17,6 +17,11 @@ const userSchema = new mongoose.Schema({
     password:{
         type: String,
         required: true,
+    },
+    userType: {
+        type: String,
+        required: true,
+        enum: ['buyer', 'vendor']
     }
 },{timestamps:true})
 

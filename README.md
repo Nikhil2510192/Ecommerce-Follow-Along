@@ -170,3 +170,40 @@ Implemented password hash comparison with stored credentials
 Added secure error messages to prevent user enumeration
 Login Response Handling
 
+
+
+## Milestone 8 Summary
+In this milestone, we implemented a reusable card component and homepage layout:
+
+
+Created reusable ProductCard component for displaying product information
+Implemented props for dynamic product data (name, image, price, etc.)
+Added interactive features like hover effects and stock status indicators
+Homepage Layout Implementation
+
+Set up responsive grid layout using Tailwind CSS
+Implemented array mapping to display multiple product cards
+Created sample product data structure for testing
+Dynamic Data Handling
+
+Used React props for flexible data passing
+Maintained consistent card design across all products
+Added visual indicators for special statuses (New, Discount)
+These implementations provide an organized and visually appealing way to showcase products while maintaining code reusability and consistency.
+
+## Milestone 9 Summary
+In this milestone, we implemented a product creation form with image upload capability:
+
+Product Form Implementation
+
+Created a comprehensive form for product data entry
+Implemented  image upload functionality
+Added form validation for required fields
+Integrated with existing routing system
+Form Field Features
+
+Product name and description inputs
+Price input validation
+
+Responsive form layout using Tailwind CSS
+Clear input labels and placeholders

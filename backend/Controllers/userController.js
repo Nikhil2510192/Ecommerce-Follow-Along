@@ -3,13 +3,16 @@ import User from "../Models/userModel.js";
 
 const createUser = async (req, res) => {
     try {
-        const { username, email, password } = req.body;
+        const { username, email, password, userType } = req.body;
 
-        console.log("Received Data:", { username, email, password });
+        console.log("Received Data:", { username, email, password, userType });
 
+        if (!username || !email || !password || !userType) {
+            return res.status(400).json({ error: "All fields (username, email, password, userType) are required." });
+        }
 
-        if (!username || !email || !password) {
-            return res.status(400).json({ error: "All fields (username, email, password) are required." });
+        if (!['buyer', 'vendor'].includes(userType)) {
+            return res.status(400).json({ error: "User type must be either 'buyer' or 'vendor'." });
         }
 
         const existingUser = await User.findOne({ username });
@@ -25,7 +28,7 @@ const createUser = async (req, res) => {
         }
 
 
-        const newUser = new User({ username, email, password });
+        const newUser = new User({ username, email, password, userType });
         await newUser.save(); 
         console.log("Success: User created");
         res.status(201).json({ message: "User created successfully!", user: newUser });
